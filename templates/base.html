@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Medium</title>
+</head>
+<style type="text/css">
+	body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #333;
+  }
+  .login-area {
+    font-size: 13px;
+    color: gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .login-link {
+    color: gray;
+    text-decoration: none;
+  }
+
+  .login-link:visited {
+    color: gray;
+  }
+
+  .login-link:hover {
+    text-decoration: underline;
+  }
+
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  a {
+    text-decoration:none;
+  }
+  .error {
+    color: red;
+  }
+
+  label {
+    display: block;
+    font-size: 20px;
+  }
+
+  label + label {
+    margin-top: 20px;
+  }
+
+  input[type=text] {
+    width: 500px;
+    font-size: 20px;
+    padding: 2px;
+    font-family: monospace;
+  }
+
+  textarea {
+    width: 500px;
+    height: 400px;
+    font-size: 17px;
+    font-family: monospace;
+  }
+
+  input[type=submit] {
+    font-size: 24px;
+  }
+
+  .main-title {
+    display: block;
+    color: #222;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: none;
+  }
+
+  .blog + .blog {
+    margin-top: 15px;
+  }
+
+  .blog-heading {
+    position: relative;
+    border-bottom: 3px solid #666;
+  }
+
+  .blog-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .blog-date {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: #999;
+
+  }
+
+  .blog-content {
+    margin-top: 5px;
+  }
+
+
+</style>
+
+<body>
+  <a href="/blog" class="main-title">
+    The Medium
+  </a>
+  <hr color="blue">
+  <div class="login-area">
+
+  <a class="login-link" href="/blog/login">login</a>
+    |
+    <a class="login-link" href="/blog/signup">signup</a>
+    
+  </div>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+
+</html>
+

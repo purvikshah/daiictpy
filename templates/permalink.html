@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h3>{{subject | safe}}</h3>
+	{{created.strftime("%b %d, %Y")}}
+	<hr>
+	{% for line in content.splitlines() %}
+    {{line}}<br>
+	{% endfor %}
+	{{age}}
+{% endblock %}

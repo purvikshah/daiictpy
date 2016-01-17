@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for blog in blogs %}
+<div class="blog">
+	<div class="blog-title">
+	{{blog.subject | safe}}
+	</div>
+	{{blog.created.strftime("%b %d, %Y")}}
+	<hr>
+	<div class="blog-body">
+	{% for line in blog.content.splitlines() %}
+    {{line}}<br>
+	{% endfor %}
+	</div>
+</div>
+<br><br>
+{% endfor %}
+<div>
+	{{age}}
+</div>
+{% endblock %}
